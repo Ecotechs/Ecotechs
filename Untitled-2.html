@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro Ecotechs</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: rgba(0, 100, 0, 0.8); /* verde escuro com transparência */
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      width: 90%;
+      max-width: 400px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    input::placeholder {
+      color: #ccc;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: white;
+      color: green;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Cadastro</h2>
+    <form id="cadastroForm">
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required />
+
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required />
+
+      <label for="cep">CEP</label>
+      <input type="text" id="cep" name="cep" placeholder="Digite seu CEP" required />
+
+      <label for="senha">Senha da conta</label>
+      <input type="password" id="senha" name="senha" placeholder="Crie uma senha" required />
+
+      <button type="submit">Cadastrar</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('cadastroForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // impede envio padrão
+      const nome = document.getElementById('nome').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const cep = document.getElementById('cep').value.trim();
+      const senha = document.getElementById('senha').value.trim();
+
+      if (!nome || !email || !cep || !senha) {
+        alert("Por favor, preencha todos os campos.");
+        return;
+      }
+
+      // Exibe sucesso (aqui você pode adicionar envio para um servidor, se desejar)
+      alert("Cadastro realizado com sucesso!");
+      this.reset(); // limpa o formulário
+    });
+  </script>
+</body>
+</html>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: url('file:///C:/Users/Aluno/Downloads/1%20(3).jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  form {
+    width: 80%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  input {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
+  }
+
+  input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  label {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  button {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    width: 300px;
+    margin: 2rem auto;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border-radius: 8px;
+  }
+
+  button:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+</style>
+
+
+
+<style>
+  body {
+    background-color: rgba(0, 100, 0, 0.95); /* Aumentando a opacidade do fundo verde */
+  }
+
+  .form-container {
+    background-color: rgba(0, 0, 0, 0.7); /* Aumentando a opacidade do container do formulário */
+  }
+</style>
+<style>
+  .login-link {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+  }
+
+  .login-link:hover {
+    transform: translateX(-50%) scale(1.1);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  }
+</style>
+
+<a href="Untitled-3.html" class="login-link">JÁ TENHO CONTA</a>
+

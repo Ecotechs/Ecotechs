@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('file:///C:/Users/Aluno/Downloads/1%20(5).jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .login-container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            color: white;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            font-family: Arial, sans-serif;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            text-transform: uppercase;
+        }
+
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+            text-transform: uppercase;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: white;
+            border: none;
+            border-radius: 5px;
+            color: black;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <form>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="Digite seu e-mail" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" placeholder="Digite sua senha" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>
+<style>
+    .login-container {
+        width: 40% !important;
+        max-width: 400px !important;
+        padding: 3rem !important;
+        margin: 5vh auto !important;
+    }
+
+    .form-group {
+        margin-bottom: 2rem !important;
+    }
+
+    input {
+        text-transform: none !important;
+        font-family: Arial, sans-serif !important;
+        padding: 1rem !important;
+        font-size: 1.2rem !important;
+        font-weight: bold !important;
+        color: white !important;
+    }
+
+    input::placeholder {
+        text-transform: none !important;
+        font-family: Arial, sans-serif !important;
+        font-weight: bold !important;
+        color: rgba(255,255,255,0.7) !important;
+    }
+
+    label {
+        font-family: Arial, sans-serif !important;
+        font-size: 1.3rem !important;
+        margin-bottom: 1rem !important;
+        font-weight: bold !important;
+        color: white !important;
+    }
+
+    button {
+        font-family: Arial, sans-serif !important;
+        padding: 1.2rem !important;
+        font-size: 1.2rem !important;
+        margin-top: 1rem !important;
+        cursor: pointer !important;
+        transition: all 0.3s ease !important;
+        font-weight: bold !important;
+        color: white !important;
+        background: rgba(255,255,255,0.2) !important;
+    }
+
+    button:hover {
+        transform: scale(1.05) !important;
+        box-shadow: 0 0 15px rgba(255,255,255,0.3) !important;
+        background: rgba(255,255,255,0.3) !important;
+    }
+
+    .signup-link {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-family: Arial, sans-serif !important;
+        font-weight: bold !important;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        transition: all 0.3s ease;
+    }
+
+    .signup-link:hover {
+        transform: translateX(-50%) scale(1.1);
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    }
+
+    @media (max-width: 768px) {
+        .login-container {
+            width: 80% !important;
+            padding: 2rem !important;
+        }
+
+        button {
+            padding: 1rem !important;
+            font-size: 1.1rem !important;
+        }
+
+        input, label {
+            font-size: 1.1rem !important;
+        }
+    }
+</style>
+
+<script>
+    document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        // Aqui você pode adicionar a lógica de login
+        console.log('Login attempt');
+        // window.location.href = 'sua-pagina-destino.html';
+    });
+</script>
+
+<a href="Untitled-2.html" class="signup-link">NÃO TENHO CONTA</a>
+
+
+
+
+
+
+
+
+

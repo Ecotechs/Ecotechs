@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecotechs</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('https://img.freepik.com/vetores-gratis/projeto-tecnologico-para-o-conceito-de-ecologia_23-2148437174.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            filter: saturate(1.8);
+            z-index: -1;
+        }
+
+        .button-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 100;
+        }
+
+        .button {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .menu-container {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+
+        .menu-button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            border-radius: 3px;
+        }
+
+        .menu-content {
+            position: fixed;
+            top: 0;
+            left: -300px;
+            height: 100vh;
+            width: 300px;
+            background-color: rgba(0, 0, 0, 0.95);
+            padding: 40px;
+            transition: left 0.3s ease;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .close-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: #90EE90;
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .menu-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 40px 0 0 0;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .menu-content li {
+            color: #90EE90;
+            padding: 15px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 18px;
+            border-bottom: 2px solid #006400;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: Arial, sans-serif;
+        }
+
+        .menu-content a {
+            color: #90EE90;
+            text-decoration: none;
+        }
+
+        .tech-title {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 36px;
+            text-align: center;
+            letter-spacing: 3px;
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .menu-content {
+                width: 100%;
+            }
+
+            .tech-title {
+                font-size: 24px;
+                padding: 0 20px;
+            }
+
+            .button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <button class="menu-button">
+            Menu
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+        <div class="menu-content">
+            <button class="close-button">X</button>
+            <ul>
+                <li><a href="https://web.telegram.org/k/#@Ecotech00_bot" target="_blank">ECOBOT</a></li>
+                <li>SOBRE NÓS</li>
+                <li>DESCARTE DE PEÇAS</li>
+                <li>DOAÇÃO E VENDA</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <button class="button">Cadastre-se</button>
+        <button class="button">Login</button>
+    </div>
+
+    <div class="tech-title">
+        TECNOLOGIA E ECOLOGIA
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuButton = document.querySelector('.menu-button');
+            const menuContent = document.querySelector('.menu-content');
+            const closeButton = document.querySelector('.close-button');
+            const cadastroButton = document.querySelectorAll('.button')[0];
+            const loginButton = document.querySelectorAll('.button')[1];
+            
+            menuButton.addEventListener('click', function() {
+                menuContent.style.left = '0';
+                menuButton.style.display = 'none';
+            });
+
+            closeButton.addEventListener('click', function() {
+                menuContent.style.left = '-300px';
+                setTimeout(() => {
+                    menuButton.style.display = 'flex';
+                }, 300);
+            });
+
+            cadastroButton.addEventListener('click', function() {
+                window.location.href = 'Untitled-2.html';
+            });
+
+            loginButton.addEventListener('click', function() {
+                window.location.href = 'Untitled-3.html';
+            });
+
+            // Menu items hover effects
+            const menuItems = document.querySelectorAll('.menu-content li');
+            menuItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.color = '#008000';
+                });
+
+                item.addEventListener('mouseleave', function() {
+                    this.style.color = '#90EE90';
+                });
+            });
+
+            // Button hover effects
+            const buttons = document.querySelectorAll('.button');
+            buttons.forEach(button => {
+                button.addEventListener('mouseenter', function() {
+                    this.style.backgroundColor = 'white';
+                    this.style.color = '#006400';
+                });
+
+                button.addEventListener('mouseleave', function() {
+                    this.style.backgroundColor = 'transparent';
+                    this.style.color = 'white';
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!menuContent.contains(event.target) && 
+                    !menuButton.contains(event.target) && 
+                    menuContent.style.left === '0px') {
+                    menuContent.style.left = '-300px';
+                    setTimeout(() => {
+                        menuButton.style.display = 'flex';
+                    }, 300);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+<style>
+    .menu-content li {
+        transition: all 0.3s ease;
+        text-shadow: none;
+    }
+
+    .menu-content li:hover {
+        color: #00ff00 !important; /* Bright neon green */
+        text-shadow: 
+            0 0 5px #00ff00,
+            0 0 10px #00ff00,
+            0 0 20px #00ff00,
+            0 0 40px #00ff00;
+        transform: scale(1.05);
+    }
+</style>
